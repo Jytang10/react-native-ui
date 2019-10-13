@@ -12,8 +12,12 @@ class PhotoSection extends Component {
         <View>
           <Image style={{width:null, height:250, borderRadius:15}} source={{uri:"https://images.unsplash.com/photo-1553174241-0b28d763cafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"}}></Image>
         </View>
-        <View>
+        <View style={styles.heartContainer}>
           <Icon name="ios-heart-empty" size={32}></Icon>
+        </View>
+        <View style={styles.imageMeta}>
+          <Text style={styles.username}>Alex_1234</Text>
+          <Text>#holiday, #Roam</Text>
         </View>
       </View>
     );
@@ -39,6 +43,16 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     fontSize:19,
     marginLeft:10
+  },
+  imageMeta: {
+    flexDirection:'row'
+  },
+  username: {
+    fontWeight:'bold',
+    paddingRight:10
+  },
+  heartContainer: {
+    paddingVertical:12
   }
 });
 
