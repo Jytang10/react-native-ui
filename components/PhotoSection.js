@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 class PhotoSection extends Component {
   render() {
     return (
@@ -11,6 +11,9 @@ class PhotoSection extends Component {
         </View>
         <View>
           <Image style={{width:null, height:250, borderRadius:15}} source={{uri:"https://images.unsplash.com/photo-1553174241-0b28d763cafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"}}></Image>
+        </View>
+        <View>
+          <Icon name="ios-heart-empty" size={32}></Icon>
         </View>
       </View>
     );
