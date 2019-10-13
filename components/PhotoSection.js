@@ -28,11 +28,11 @@ class PhotoSection extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.thumbnailSection}>
-          <Image source={{uri:"http://i.pravatar.cc/400?img=3"}} style={styles.thumbnail}></Image>
-          <Text style={styles.headUserName}>PhotoSection</Text>
+          <Image source={{uri:this.props.detail.user_avatar}} style={styles.thumbnail}></Image>
+          <Text style={styles.headUserName}>{this.props.detail.username}</Text>
         </View>
         <View>
-          <Image style={{width:null, height:250, borderRadius:15}} source={{uri:"https://images.unsplash.com/photo-1553174241-0b28d763cafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"}}></Image>
+          <Image style={{width:null, height:250, borderRadius:15}} source={{uri:this.props.detail.image}}></Image>
         </View>
         <View style={styles.heartContainer}>
           <TouchableWithoutFeedback onPress={this.toggleLike}>
@@ -40,8 +40,8 @@ class PhotoSection extends Component {
           </TouchableWithoutFeedback>
         </View>
         <View style={styles.imageMeta}>
-          <Text style={styles.username}>Alex_1234</Text>
-          <Text>#holiday, #Roam</Text>
+          <Text style={styles.username}>{this.props.detail.username}</Text>
+          <Text>{this.props.detail.caption}</Text>
         </View>
       </View>
     );
