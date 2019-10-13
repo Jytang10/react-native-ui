@@ -5,18 +5,25 @@ class Heading extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Photos</Text>
+        <Text style={styles.text}>Photos</Text>
       </View>
     );
   }
 }
 
-// define your styles
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
+    borderBottomColor:'#ddd',
+    borderBottomWidth:2
   },
+  text: {
+    fontSize:18,
+    fontWeight:'bold',
+    textAlign:'center',
+    margin:15
+  }
 });
 
 export default Heading;
