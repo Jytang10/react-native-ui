@@ -9,6 +9,9 @@ class PhotoSection extends Component {
           <Image source={{uri:"http://i.pravatar.cc/400?img=3"}} style={styles.thumbnail}></Image>
           <Text style={styles.headUserName}>PhotoSection</Text>
         </View>
+        <View>
+          <Image style={{width:null, height:250, borderRadius:15}} source={{uri:"https://images.unsplash.com/photo-1553174241-0b28d763cafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"}}></Image>
+        </View>
       </View>
     );
   }
@@ -16,7 +19,8 @@ class PhotoSection extends Component {
 
 const styles = StyleSheet.create({
   container: {
-
+    flex:1,
+    margin:10
   },
   thumbnailSection: {
     flexDirection:'row',
