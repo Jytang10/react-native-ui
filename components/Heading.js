@@ -1,14 +1,11 @@
-//import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Heading from './components/Heading';
 
-// create a component
-class App extends Component {
+class Heading extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Heading></Heading>
+        <Text>Photos</Text>
       </View>
     );
   }
@@ -17,10 +14,9 @@ class App extends Component {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff'
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
-//make this component available to the app
-export default App;
+export default Heading;
