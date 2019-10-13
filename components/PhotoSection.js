@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 class PhotoSection extends Component {
+
+  state = {
+    heartIcon: 'ios-heart-empty',
+    like: false
+  }
+
+  toggleLike = () => {
+    this.setState({
+      like: !this.state.like
+    })
+
+    if(this.state.heartIcon){
+      this.setState({
+        heartIcon:'ios-heart'
+      })
+    } else {
+      this.setState({
+        heartIcon:'ios-heart-empty'
+      })
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -13,7 +35,9 @@ class PhotoSection extends Component {
           <Image style={{width:null, height:250, borderRadius:15}} source={{uri:"https://images.unsplash.com/photo-1553174241-0b28d763cafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"}}></Image>
         </View>
         <View style={styles.heartContainer}>
-          <Icon name="ios-heart-empty" size={32}></Icon>
+          <TouchableWithoutFeedback onPress={this.toggleLike}>
+            <Icon name={this.state.heartIcon} size={32}></Icon>
+          </TouchableWithoutFeedback>
         </View>
         <View style={styles.imageMeta}>
           <Text style={styles.username}>Alex_1234</Text>
