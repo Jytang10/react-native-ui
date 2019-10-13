@@ -13,7 +13,7 @@ class PhotoSection extends Component {
       like: !this.state.like
     })
 
-    if(this.state.heartIcon){
+    if(this.state.like){
       this.setState({
         heartIcon:'ios-heart'
       })
@@ -36,7 +36,7 @@ class PhotoSection extends Component {
         </View>
         <View style={styles.heartContainer}>
           <TouchableWithoutFeedback onPress={this.toggleLike}>
-            <Icon name={this.state.heartIcon} size={32}></Icon>
+            <Icon name={this.state.heartIcon} size={32} style={{color:this.state.heartIcon === 'ios-heart-empty' ? 'black' : 'red'}}></Icon>
           </TouchableWithoutFeedback>
         </View>
         <View style={styles.imageMeta}>
