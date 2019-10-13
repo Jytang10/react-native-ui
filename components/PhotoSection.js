@@ -51,7 +51,8 @@ class PhotoSection extends Component {
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    margin:10
+    margin:10,
+    backgroundColor:'#f1f2f6'
   },
   thumbnailSection: {
     flexDirection:'row',

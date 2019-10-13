@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import PhotoSection from './PhotoSection';
+import data from '../data';
 
 class PhotoList extends Component {
+
+  state = {
+    data: data
+  }
+
+  getPhotos = () => {
+    return this.state.data.map(data => {
+      return <PhotoSection detail={data} key={data.id}></PhotoSection>
+    })
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
-        <PhotoSection></PhotoSection>
+        {this.getPhotos()}
       </ScrollView>
     );
   }
