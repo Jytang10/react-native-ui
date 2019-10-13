@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Heading from './components/Heading';
+import PhotoList from './components/PhotoList';
 
 // create a component
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Heading></Heading>
+        <PhotoList></PhotoList>
       </View>
     );
   }
